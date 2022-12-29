@@ -1,0 +1,61 @@
+package product;
+
+import java.util.ArrayList;
+
+public class Product출력 {
+
+	public static void main(String[] args) {
+		// product를 class로 구성하여 상품을 등록/출력
+		
+		
+		/* Class SaleManager
+		 * >> menu
+		 * 1.제품추가(메뉴추가)
+		 * 2.제품리스트보기(메뉴판 출력)
+		 * 3.제품주문(제품명,수량)
+		 * 4.주문내역(주문리스트 출력) - 지불할 총 금액 계산
+		 * 5.프로그램 종료
+		 * 
+		 * */
+		
+		/* 메뉴를 등록하시겠습니까? (y/n) y
+		 * 상품명: 피자
+		 * 가격: 15000
+		 * 
+		 * */
+		ArrayList<Product> list = new ArrayList<>(); // 메뉴등록 리스트
+		ArrayList<Product> sale = new ArrayList<>(); // 제품주문 리스트
+
+	}
+
+}
+
+class Product{
+	
+	private String menu;
+	private int price;
+	
+	public Product() {}
+	public Product(String menu, int price) {
+		this.menu = menu;
+		this.price = price;
+	}
+	public String getMenu() {
+		return menu;
+	}
+	public void setMenu(String menu) {
+		this.menu = menu;
+	}
+	public int getPrice() {
+		return price;
+	}
+	public void setPrice(int price) {
+		this.price = price;
+	}
+	@Override
+	public String toString() {
+		return menu + ": " + price + "\n";
+	}
+	
+	
+}

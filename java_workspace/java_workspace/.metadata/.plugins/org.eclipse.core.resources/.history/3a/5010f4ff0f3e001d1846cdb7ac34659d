@@ -1,0 +1,64 @@
+package studentManager;
+
+public class Subject {
+	/*
+	 * 2. 과목클래스(별도생성!!)
+	 * 과목클래스 : 한과목의 정보를 나타내는 클래스
+	 * 멤버변수 : 과목코드, 과목명, 학점, 몇시간(시수), 교수명
+	 * getter/setter, toString() 사용하기
+	 * 생성자
+	 * */
+	
+	private String code;
+	private String name;
+	private String grade;
+	private String time;
+	private String proname;
+	
+	public Subject() {}
+	public Subject(String code, String name, String grade, String time, String proname) {
+		this.code = code;
+		this.name = name;
+		this.grade = grade;
+		this.time = time;
+		this.proname = proname;
+	}
+
+	public String getCode() {
+		return code;
+	}
+	public void setCode(String code) {
+		this.code = code;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getGrade() {
+		return grade;
+	}
+	public void setGrade(String grade) {
+		this.grade = grade;
+	}
+	public String getTime() {
+		return time;
+	}
+	public void setTime(String time) {
+		this.time = time;
+	}
+	public String getProname() {
+		return proname;
+	}
+	public void setProname(String proname) {
+		this.proname = proname;
+	}
+	@Override
+	public String toString() {
+		return "Subject [과목코드=" + code + ", 과목명=" + name + ", 학점=" + grade + ", 시수=" + time + ", 교수명="
+				+ proname + "]";
+	}
+	
+	
+}

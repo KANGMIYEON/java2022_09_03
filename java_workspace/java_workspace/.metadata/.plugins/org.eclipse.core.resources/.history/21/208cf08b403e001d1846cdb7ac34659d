@@ -1,0 +1,26 @@
+package day10;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.List;
+
+public class Set01 {
+
+	public static void main(String[] args) {
+		// Set은 순서보장 X, 중복 X
+		// HashSet을 많이 사용
+		// Iterator로만 출력 가능
+		HashSet<String> set = new HashSet<String>();
+		set.add("apple");
+		set.add("banana");
+		set.add("apple"); // 에러는 아니지만 재저장의 개념
+		set.add("peach");
+		System.out.println(set);
+		
+		// 정렬 : set은 순서보장X, 따라서 정렬 안 됨. => set을 list로 변경한 후 정렬
+		List list = new ArrayList(set);
+		Collections.sort(list);
+	}
+
+}

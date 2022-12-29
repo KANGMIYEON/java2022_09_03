@@ -1,0 +1,6 @@
+package lottoProgram;
+
+public class Lotto {
+	
+	int user[] = new int[6]; // 로또 사용자번호
+}

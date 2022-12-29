@@ -1,0 +1,79 @@
+package studentManager;
+
+public class Student {
+	/*
+	 * 3. 학생클래스(별도생성!!)
+	 * 학생클래스 : 한 학생의 정보를 나타내는 클래스
+	 * 멤버변수 : 학번, 이름, 주민번호, 학부, 학과, 수강과목(여러개)-과목클래스 배열생성
+	 * 멤버메서드
+	 * getter/setter
+	 * toString() or print() 메서드 - 한 학생의 정보출력
+	 * 수강과목추가 - 배열이 다 찼다면 늘려주기
+	 * 수강과목삭제
+	 * 생성자
+	 * */
+	
+	private String stuNum;
+	private String name;
+	private String resNum;
+	private String hakbu;
+	private String major;
+	private String lesson;
+//	private lesson[] lessonArr;
+	
+	public Student() {}
+	public Student(String stuNum, String name, String resNum, String hakbu, String major, String lesson) {
+		this.stuNum = stuNum;
+		this.name = name;
+		this.resNum = resNum;
+		this.hakbu = hakbu;
+		this.major = major;
+		this.lesson = lesson;
+	}
+	public String getStuNum() {
+		return stuNum;
+	}
+	public void setStuNum(String stuNum) {
+		this.stuNum = stuNum;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getResNum() {
+		return resNum;
+	}
+	public void setResNum(String resNum) {
+		this.resNum = resNum;
+	}
+	public String getHakbu() {
+		return hakbu;
+	}
+	public void setHakbu(String hakbu) {
+		this.hakbu = hakbu;
+	}
+	public String getMajor() {
+		return major;
+	}
+	public void setMajor(String major) {
+		this.major = major;
+	}
+	public String getLesson() {
+		return lesson;
+	}
+	public void setLesson(String lesson) {
+		this.lesson = lesson;
+	}
+	@Override
+	public String toString() {
+		return "Student [학번=" + stuNum + ", 이름=" + name + ", 주민번호=" + resNum + ", 학부=" + hakbu + ", 학과="
+				+ major + ", 수강과목=" + lesson + "]";
+	}
+	public void insertLesson(String lesson[]) {
+		for(int i=0; i<)
+	}
+	
+	
+}

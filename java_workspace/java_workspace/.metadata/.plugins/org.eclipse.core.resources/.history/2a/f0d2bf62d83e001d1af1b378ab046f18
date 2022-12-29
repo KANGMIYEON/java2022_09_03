@@ -1,0 +1,24 @@
+package day11;
+
+import java.util.HashMap;
+
+public class Map02 {
+
+	public static void main(String[] args) {
+		// key/value
+		// set으로 변경 후 Iterator 출력
+		
+		HashMap<String, Integer> map = new HashMap<>();
+		map.put("국어", 89);
+		map.put("영어", 78);
+		map.put("수학", 84);
+		System.out.println("국어:"+map.get("국어")); // key를 get 하면 value값 가져옴
+		System.out.println("--------------------");
+		System.out.println(map.entrySet());
+		System.out.println(map.keySet());
+		
+		
+
+	}
+
+}

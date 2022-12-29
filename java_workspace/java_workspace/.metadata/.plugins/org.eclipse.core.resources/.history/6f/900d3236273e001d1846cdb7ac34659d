@@ -1,0 +1,39 @@
+package day10;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+// import java.util.*; : 전체 import
+
+public class List01 {
+
+	public static void main(String[] args) {
+		/*
+		 * 하루 일과를 저장하는 list를 생성 <String>
+		 * 
+		 * */
+		ArrayList<String> list = new ArrayList<String>();
+		list.add("1. 기상");
+		list.add("2. 씻기");
+		list.add("3. 아침먹기");
+		list.add("4. 학원가기");
+		list.add("5. 공부하기");
+		list.add("6. 점심먹기");
+		list.add("7. 집에가기");
+		
+		for(int i=0; i<list.size(); i++) {
+			System.out.println(list.get(i));
+		}
+		
+		System.out.println(list);
+//		System.out.println();
+		
+		System.out.println("♥ 하루 일과 ♥");
+		Iterator<String> it = list.iterator();
+		while(it.hasNext()) {
+			String tmp = it.next();
+			System.out.println(tmp);
+		}
+		
+	}
+
+}

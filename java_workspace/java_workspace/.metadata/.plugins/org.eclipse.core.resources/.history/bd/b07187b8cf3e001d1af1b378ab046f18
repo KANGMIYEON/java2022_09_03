@@ -1,0 +1,41 @@
+package day11;
+
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
+
+public class SetEx01 {
+
+	public static void main(String[] args) {
+		/*
+		 * HashSet을 구성하고, a,b,c,a,b,c 추가
+		 * Iterator 출력
+		 * Set은 중복불가, 순서보장 불가
+		 * => 정렬이 안 돼서 list로 변경 후 정렬!
+		 * => TreeSet으로 하면 정렬이 돼서 나옴
+		 * 
+		 * */
+
+		HashSet<String> set = new HashSet<>();
+		set.add("a");
+		set.add("b");
+		set.add("c");
+		set.add("a");
+		set.add("b");
+		set.add("c");
+	
+		System.out.println(set);
+		
+		Iterator<String> it = set.iterator();
+		while(it.hasNext()) {
+			String tmp = it.next();
+			System.out.print(tmp+" ");
+		}
+		
+		Set<Integer> set2 = new HashSet<>();
+		set2.add(10);
+		set2.add(new Integer(20)); // 현재 사용하지 않는 형태라는 의미
+		System.out.println(set2);
+	}
+
+}

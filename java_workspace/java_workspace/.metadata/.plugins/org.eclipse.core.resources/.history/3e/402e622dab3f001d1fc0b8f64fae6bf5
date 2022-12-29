@@ -1,0 +1,16 @@
+package word;
+
+public class WordMain {
+
+	public static void main(String[] args) {
+		/* 단어장 프로그램 작성
+		 * 1. 단어등록 (메서드)
+		 * 2. 단어검색
+		 * 3. 단어수정
+		 * 4. 단어출력
+		 * 5. 종료
+		 * */
+
+	}
+
+}

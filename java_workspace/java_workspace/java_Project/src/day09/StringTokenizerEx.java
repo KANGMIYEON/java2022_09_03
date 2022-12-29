@@ -1,0 +1,38 @@
+package day09;
+
+import java.util.StringTokenizer;
+
+public class StringTokenizerEx {
+
+	public static void main(String[] args) {
+		
+		String str = "100,200,300,400,500";
+		
+		// StringTokenizer(문자열, 구분자, true/false); true 구분자 포함/false 구분자 미포함
+		StringTokenizer st = new StringTokenizer(str, ",");
+		while(st.hasMoreTokens()) { // 조건식 : st에 남은 token이 있니
+			System.out.print(st.nextToken()+" ");
+			System.out.println(st.countTokens()); // 남아있는 token 수
+		}
+		// split(구분자) 문자열분리 배열로 반환
+		String[] num = str.split(","); // 배열로 반환
+		for(String tmp:num) {
+			System.out.print(tmp+" ");
+		}
+		// StringTokenizer
+		System.out.println();
+		System.out.println("---------------");
+		String exp = "x=100*(10-a)/3*2";
+		StringTokenizer st2 = new StringTokenizer(exp, "x=*(-)/", false); // 구분자 미포함
+		while(st2.hasMoreTokens()) {
+			System.out.print(st2.nextToken()+" ");
+		}
+		// split
+		System.out.println();
+		String[] num1 = exp.split("x|=|(|-|)|/"); // 배열로 반환
+		for(String tmp:num1) {
+			System.out.print(tmp+" ");
+		}
+	}
+
+}

@@ -1,0 +1,12 @@
+package day09;
+
+import java.math.BigDecimal;
+
+public class BigDecimalEx {
+
+	public static void main(String[] args) {
+		BigDecimal bd = new BigDecimal("1000000.1234");
+		System.out.println(bd);
+	}
+
+}

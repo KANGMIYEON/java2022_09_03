@@ -1,0 +1,34 @@
+package day11;
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Scanner;
+
+public class MapEx02 {
+
+	public static void main(String[] args) {
+		/*
+		 * 단어장 : 단어:의미 => hello:안녕
+		 * 5 => 5개의 단어 입력 / 입력받은 수 만큼 size 생성
+		 * */
+		
+		HashMap<String, String> map = new HashMap<>();
+		
+		Scanner scan = new Scanner(System.in);
+		System.out.println("저장을 원하는 개수를 입력해주세요.");
+		int input = scan.nextInt();
+		
+		for(int i=0; i<input; i++) {
+			System.out.println("단어와 뜻을"+input+"개 입력해주세요.");
+			String str = scan.next();
+			String mean = scan.next();
+		}
+		
+		Iterator<String> it = map.keySet().iterator();
+		while(it.hasNext()) {
+			String key = it.next();
+			System.out.println(key+":"+map.get(key));
+		}
+	}
+
+}

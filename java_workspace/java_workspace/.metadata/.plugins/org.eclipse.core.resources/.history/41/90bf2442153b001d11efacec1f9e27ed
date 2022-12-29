@@ -1,0 +1,24 @@
+package day09;
+
+import java.util.StringTokenizer;
+
+public class StringTokenizerEx {
+
+	public static void main(String[] args) {
+		
+		String str = "100,200,300,400,500";
+		
+		// StringTokenizer(문자열, 구분자)
+		StringTokenizer st = new StringTokenizer(str, ","); // split처럼 문자열 구분
+		while(st.hasMoreTokens()) { // st에 남은 Token이 있니
+			System.out.println(st.nextToken());
+			
+		}
+		// split(구분자) 문자열분리 배열로 반환
+		String[] num = str.split(",");
+		for(String tmp:num) {
+			System.out.print(tmp+" ");
+		}
+	}
+
+}

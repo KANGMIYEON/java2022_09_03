@@ -1,0 +1,17 @@
+package lotto;
+
+import java.util.Scanner;
+
+public class 로또프로그램 {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int arr[] = {1,5,7,9,4,6};
+		Lotto l = new Lotto();
+		l.insertNumber(arr);
+		System.out.println(l);
+		scan.close();
+
+	}
+
+}

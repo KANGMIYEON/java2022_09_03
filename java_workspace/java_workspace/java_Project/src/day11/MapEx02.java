@@ -1,0 +1,40 @@
+package day11;
+
+import java.util.Iterator;
+import java.util.Scanner;
+import java.util.TreeMap;
+
+public class MapEx02 {
+
+	public static void main(String[] args) {
+		/*
+		 * 단어장 : 단어:의미 => hello:안녕
+		 * 5 => 5개의 단어 입력 / 입력받은 수 만큼 size 생성
+		 * */
+		
+		// 1.Map생성(스캐너 열기)
+		TreeMap<String, String> map = new TreeMap<>();
+		Scanner scan = new Scanner(System.in);
+		// 2. 입력할 단어 개수 받기
+		System.out.println("저장을 원하는 개수를 입력해주세요.");
+		int input = scan.nextInt();
+		
+		// 3. while을 이용하여 입력받은 값 만큼 단어와 뜻을 입력받고 맵에 put
+		while(map.size()<input) {
+			System.out.println("단어:");
+			String word = scan.next();
+			System.out.println("의미:");
+			String mean = scan.next();
+			map.put(word, mean); // map.size 증가
+		}
+		// 4. 출력
+			Iterator<String> it = map.keySet().iterator();
+			while(it.hasNext()) {
+				String word = it.next(); // key 반환
+				String mean = map.get(word); // value 반환
+				System.out.println(word+":"+mean); 
+			}
+		
+	}
+
+}

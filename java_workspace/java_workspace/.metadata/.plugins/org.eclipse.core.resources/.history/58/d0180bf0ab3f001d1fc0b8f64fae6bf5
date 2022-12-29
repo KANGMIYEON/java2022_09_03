@@ -1,0 +1,39 @@
+package word;
+
+import java.util.Scanner;
+
+public class WordMain {
+
+	public static void main(String[] args) {
+		/* 단어장 프로그램 작성
+		 * 1. 단어등록 => void addWord(Scanner scan)
+		 * 2. 단어검색 => void searchWord(Scanner scan)
+		 * 3. 단어수정 => void fixWord(Scanner scan)
+		 * 4. 단어출력 => void printWord()
+		 * 5. 종료
+		 * */
+		
+		WordManager wm = new WordManager();
+		Scanner scan = new Scanner(System.in);
+		
+		int menu = -1;
+		do {
+			wm.printMenu();
+			menu = scan.nextInt();
+			
+			switch(menu) {
+			case 1: wm.addWord(scan); break;
+			case 2: wm.searchWord(scan); break;
+			case 3: wm.fixWord(scan); break;
+			case 4: wm.printWord(); break;
+			case 5: break;
+			default: System.out.println("메뉴를 잘못 입력하셨습니다.");
+			}
+			
+		} while(menu != 5);
+		System.out.println("프로그램 종료!");
+		scan.close();
+
+	}
+
+}

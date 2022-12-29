@@ -1,0 +1,37 @@
+package day11;
+
+import java.util.Random;
+import java.util.TreeSet;
+
+public class TreeSet01 {
+
+	public static void main(String[] args) {
+		/*
+		 * TreeSet을 생성하고, 로또번호 6자리 담기
+		 * 1~45까지 랜덤으로 for문으로 6개 담기
+		 * TreeSet은 중복 안 되기 때문에 중복체크 안 해도 됨.
+		 * 정렬도 안 해도 알아서 해줌!
+		 * 
+		 * */
+		
+		// 방법 1.
+		TreeSet<Integer> lotto1 = new TreeSet<>(); 
+		for(int i=0; lotto1.size()<6; i++) {
+			int num = new Random().nextInt(45)+1;
+			lotto1.add(num);
+		}
+		System.out.println(lotto1.first()); // 첫번째 값 (TreeSet에서만 가능)
+		System.out.println(lotto1.last()); // 끝 값 (TreeSet에서만 가능)
+		System.out.println(lotto1);
+		
+		// 방법 2.
+		TreeSet<Integer> lotto = new TreeSet<>();
+		for(int i=1; lotto.size()<6; i++) {
+			i = (int)(Math.random()*45)+1;
+			lotto.add(i);
+		}
+		System.out.println(lotto);
+		
+	}
+
+}

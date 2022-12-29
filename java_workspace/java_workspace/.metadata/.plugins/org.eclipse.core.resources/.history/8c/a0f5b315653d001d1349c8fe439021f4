@@ -1,0 +1,5 @@
+package lottoProgram;
+
+public interface Program {
+
+}

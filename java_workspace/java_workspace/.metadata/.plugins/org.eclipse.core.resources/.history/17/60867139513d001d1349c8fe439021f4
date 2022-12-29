@@ -1,0 +1,33 @@
+package studentManager01;
+
+import java.util.Scanner;
+
+public class 수강관리프로그램 {
+
+	public static void main(String[] args) {
+		/*
+		 * 수강관리프로그램 - main (실행시킬 곳)
+		 * --메뉴--
+		 * 1.학생등록
+		 * 2.학생확인(학생리스트)
+		 * 3.학생검색
+		 * 4.수강신청(여러과목가능)
+		 * 5.수강철회
+		 * 6.종료
+		 * */
+		
+		StudentManager sm = new StudentManager();
+		Scanner sc = new Scanner(System.in);
+		int menu = 0;
+		do {
+			sm.printMenu();
+		} while(menu != 6);
+		
+		
+		
+		
+		
+		
+	}
+
+}

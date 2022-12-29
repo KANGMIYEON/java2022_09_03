@@ -1,0 +1,10 @@
+package product;
+
+import java.util.ArrayList;
+
+public class ProManager {
+	
+	ArrayList<Product> menu = new ArrayList<>(); // 메뉴등록 리스트
+	ArrayList<Product> order = new ArrayList<>(); // 제품주문 리스트
+
+}

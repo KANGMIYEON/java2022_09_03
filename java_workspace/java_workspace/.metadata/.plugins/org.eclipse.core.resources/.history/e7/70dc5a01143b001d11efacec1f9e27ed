@@ -1,0 +1,27 @@
+package day09;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class RegularExpressionEx01 {
+
+	public static void main(String[] args) {
+		/*
+		 * \d: 숫자, *: 전체, [a-zA-Z]: 영문자 1글자
+		 * (02|010)-\d{3,4}-\d{4} => 010-1234-1234
+		 * 
+		 * */
+		
+		String[] strArr = {"bat", "cat", "baby", "cart", "coffee", "date",
+				"car", "disc", "count", "banana", "apple"};
+		
+		Pattern pattern = Pattern.compile("b[a-z]*"); // b로 시작하는 것
+		for(String str : strArr) {
+			Matcher matcher = pattern.matcher(str);
+			if(matcher.matches()) { // 패턴일치가 되면 true
+				System.out.print(str+" ");
+			}
+		}
+		
+	}
+}
